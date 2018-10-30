@@ -1,7 +1,7 @@
 #include <iostream>
 
 int square(int x) {
-    int retval = 0;
+    int retval = {0};
     for (int i=0; i<x; ++i) {
         retval+=x;
     }
@@ -9,7 +9,7 @@ int square(int x) {
 }
 
 int main() {
-    int i = 0;
+    int i = {0};
     while (i<100) {
         std::cout << i << '\t' << square(i) << std::endl;
         ++i;
