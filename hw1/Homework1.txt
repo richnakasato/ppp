@@ -1,0 +1,58 @@
+10/21/2018
+
+courses.cse.tamu.edu/keyser/csce121/Homework1.htm
+
+CSCE 121(505-508)
+Due 11:59 p.m., 1/27/14
+
+Homework 1
+[60 points]
+
+This Homework assignment is meant to give you some experience wri ng rela vely simple C++ programs, using various
+data types, and some basic input and output.
+All work should be turned into CSNet by the deadline. For programs, you need to turn in only the source code (not object
+or executable code). Your code will be tested using g++: you are welcome to develop in Visual Studio, but please make
+sure your code also runs in g++.
+0) Create a text ﬁle, README, in which you:
+a. State the Aggie Honor statement, or else explain why you cannot do so.
+b. List any resources used, outside the textbook and discussions with the Instructor, TA, or Peer Teacher
+c. List any known problems with the assignments you are turning in. For example, if you know your code
+does not run correctly, state that. This does not need to be a long explana on.
+1) [20 points] There are 9 posi ons in baseball: Pitcher, Catcher, First Base, Second Base, Shortstop, Third Base,
+Right Field, Center Field, Le Field. Write a program that asks for the name (in standard FirstName LastName
+format) of players playing each of these posi ons, then outputs a list of the players by posi on, in the form
+LastName, FirstName. Format the list so that the Posi ons and Names line up.
+a. For example, the program might ask “Who is the Catcher?” and the user enter “Joe Smith”. A er all 9
+players are entered, there would be a line printed out that said “Catcher: Smith, Joe”
+2) [40+2 points] Write a program that helps a server in a restaurant determine the average ps he or she receives.
+a. The program should repeatedly ask for informa on from tables, and output a running set of data. That
+is, it should read about one table, then produce output, read about another table, produce output, etc.
+b. Input should ask for the number of people at the table, the total bill for the table before p, and the
+amount of the p. For example, 4 35.18 6.00 might be input, indica ng a table of 4 with a total bill of
+$35.18, and a p of $6.00.
+c. A er reading each p, you should output the following:
+You have waited on a total of XXXX people at XXXX tables.
+The average bill per table is $XXXX, and the average bill per person is $XXXX.
+The average p per table is $XXXX, and the average p per person is $XXXX.
+The average rate of pping is XXXX%.
+The biggest p you received was $XXXX per person at the table.
+The smallest p you received was $XXXX per person at the table.
+So, a er the line above, you would print out:
+You have waited on a total of 4 people at 1 tables.
+The average bill per table is $35.18, and the average bill per person is $6.00.
+The average p per table is $6.00, and the average p per person is $1.50.
+The average rate of pping is 17.06%.
+The biggest p you received was $1.50 per person at the table.
+The smallest p you received was $1.50 per person at the table.
+d. [2 point bonus] You probably no ced that your output does not come out with the right number of
+digits. There is no penalty if you have addi onal digits. However, if you can ﬁgure out how to display all
+the $ and % numbers with exactly 2 decimal places, you can get a bonus 2 points.
+e. Hint: as you code this, work at ge ng just one number at a me correct. Make sure you are able to print
+the number of tables correctly. Once you are sure you have that, then add the number of people. Then
+try to ﬁnd the average bill per table, etc.
+
+http://courses.cse.tamu.edu/keyser/csce121/Homework1.htm
+
+1/1
+
+
