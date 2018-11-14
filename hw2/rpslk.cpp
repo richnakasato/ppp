@@ -38,10 +38,10 @@ struct Hand {
         defeats(defeats),
         methods(methods) {};
 
-    Hand() :
-        Hand("unknown",
-             {"unknown"},
-             {std::make_pair("unknown", "beats")}) {};
+    Hand() : Hand(
+            "unknown",
+            {"unknown"},
+            {std::make_pair("unknown", "beats")}) {};
 
     bool is_defeats(const Hand& opponent_hand) {
         return defeats.find(opponent_hand.name) != defeats.end();
