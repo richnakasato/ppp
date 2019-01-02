@@ -64,9 +64,9 @@ std::vector<CompoundInterest> get_inputs() {
     return inputs;
 }
 
-void show_results(std::vector<CompoundInterest> inputs) {
-    for (auto& input : inputs) {
-        std::cout << "\nbal\t\tperiods\t\trate\t\tresult\n";
+void show_results(const std::vector<CompoundInterest>& inputs) {
+    for (const auto& input : inputs) {
+        std::cout << "\nbalance\t\tperiods\t\trate\t\tresult\n";
         std::cout << input.balance << "\t\t"
                   << input.periods << "\t\t"
                   << input.rate << "\t\t"
