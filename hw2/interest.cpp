@@ -42,27 +42,23 @@ std::vector<CompoundInterest> get_inputs() {
     std::vector<CompoundInterest> inputs;
     while (true) {
         CompoundInterest temp;
+
         std::cout << "balance: ";
         std::cin >> temp.balance;
-        if (check_input()) {
-            if (temp.balance == 0) { break; }
-            else {
-                std::cout << "periods: ";
-                std::cin >> temp.periods;
-                if (check_input()) {
-                    std::cout << "rate: ";
-                    std::cin >> temp.rate;
-                    if (check_input()
-                            && validate_input(temp.balance,
-                                              temp.periods,
-                                              temp.rate)) {
-                        temp.result = calculate(temp.balance,
-                                                temp.periods,
-                                                temp.rate);
-                        inputs.push_back(temp);
-                    }
-                }
-            }
+        if (!check_input()) { continue; }
+        else if (temp.balance == 0) { break; }
+
+        std::cout << "periods: ";
+        std::cin >> temp.periods;
+        if (!check_input()) { continue; }
+
+        std::cout << "rate: ";
+        std::cin >> temp.rate;
+        if (!check_input()) { continue; }
+
+        if (validate_input(temp.balance, temp.periods, temp.rate)) {
+            temp.result = calculate(temp.balance, temp.periods, temp.rate);
+            inputs.push_back(temp);
         }
     }
     return inputs;
@@ -70,7 +66,7 @@ std::vector<CompoundInterest> get_inputs() {
 
 void show_results(std::vector<CompoundInterest> inputs) {
     for (auto& input : inputs) {
-        std::cout << "bal\t\tperiods\t\trate\t\tresult\n";
+        std::cout << "\nbal\t\tperiods\t\trate\t\tresult\n";
         std::cout << input.balance << "\t\t"
                   << input.periods << "\t\t"
                   << input.rate << "\t\t"
@@ -79,8 +75,7 @@ void show_results(std::vector<CompoundInterest> inputs) {
 }
 
 int main() {
-    std::vector<CompoundInterest> inputs;
-    inputs = get_inputs();
+    std::vector<CompoundInterest> inputs = get_inputs();
     show_results(inputs);
     return 0;
 }
